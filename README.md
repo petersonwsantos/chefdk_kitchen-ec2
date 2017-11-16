@@ -21,7 +21,7 @@ $ docker run -it --name chef_playground \
     petersonwsantos/chefdk_kitchen-ec2
 ```
 
-```
+
 Explanation command above:
 
    ```
@@ -29,18 +29,13 @@ Explanation command above:
 
       -v ~/.aws:/root/.aws \
    ```
-   
    ```
       # Creates volume for my authentication key, that will be used in ".kitchen.yml" . ( ssh_key:~/.ssh/key_aws_ec2 ).   
 
       -v ~/.ssh:/root/.ssh \
-
    ```
-
-
    ```
     # Mount volume for my cookbooks's code ( $ cd my_dev_code/ ).    
 
       --mount type=bind,source="$(pwd)",target=/cookbook \
-
    ```
