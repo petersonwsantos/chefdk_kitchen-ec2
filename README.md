@@ -25,10 +25,12 @@ $ docker run -it --name chef_playground \
 Explanation command above:
 
 -   "-v ~/.aws:/root/.aws "
-Creates a volume for my awscli credentials created earlier in my notebook. If you prefer you can take this line and run "awcli configure " directly in the container.
+Creates a volume for my awscli credentials created earlier in my notebook. 
+If you prefer you can take this line and run "awcli configure " directly in the container.
 
 -   " -v ~/.ssh:/root/.ssh "
-Creates volume for my authentication key, that will be used in ".kitchen.yml" . ( ssh_key:~/.ssh/key_aws_ec2 ).   
+Creates volume for my authentication key, that will be used in ".kitchen.yml". 
+( ssh_key:~/.ssh/key_aws_ec2 ).   
 
 -  "--mount type=bind,source="$(pwd)",target=/cookbook "
  Mount volume for my cookbooks's code ( $ cd my_dev_code/ ).    
